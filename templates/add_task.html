@@ -4,6 +4,7 @@
         Add Task
     </h3>
     <div class="row card-panel grey lighten-5">
+        <!-- category selector -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
@@ -16,7 +17,9 @@
                 <label for="category_name">Task Category</label>
             </div>
         </div>
-        <form class="col s12" method="POST" action="">
+        <!-- input form -->
+        <form class="col s12" method="POST" action="{{ url_for('add_task')}}">
+            <!-- task name-->
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
@@ -24,6 +27,7 @@
                 <label for="task_name" >Task Name</label>
                 </div>
             </div>
+            <!-- task description-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
@@ -31,6 +35,7 @@
                     <label for="task_description">Task Description</label>
                 </div>
             </div>
+            <!-- date picker  -->
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
@@ -38,6 +43,7 @@
                 <label for="due_date" >Due Date</label>
                 </div>
             </div>
+            <!-- is urgent -->
             <div class="row">
                 <input-field class="s12 col">
                     <div class="switch">
@@ -48,6 +54,12 @@
                         </label>
                   </div>
                 </input-field>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large light-blue darken-1 text-shadow"> Add Task <i class="fas fa-plus-square right"></i>
+                    </button>
+                </div>
             </div>
         </form>
     </div>
